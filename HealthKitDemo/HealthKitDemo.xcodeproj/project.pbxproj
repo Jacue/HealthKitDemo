@@ -8,23 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		4B397C41209F314500A13487 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B397C40209F314500A13487 /* AppDelegate.swift */; };
-		4B397C43209F314500A13487 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B397C42209F314500A13487 /* ViewController.swift */; };
+		4B397C43209F314500A13487 /* HKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B397C42209F314500A13487 /* HKViewController.swift */; };
 		4B397C46209F314500A13487 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B397C44209F314500A13487 /* Main.storyboard */; };
 		4B397C48209F314500A13487 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B397C47209F314500A13487 /* Assets.xcassets */; };
 		4B397C4B209F314500A13487 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B397C49209F314500A13487 /* LaunchScreen.storyboard */; };
 		4B397C55209F315E00A13487 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B397C54209F315E00A13487 /* HealthKit.framework */; };
+		4B5E2F6120A028F1006F4579 /* FakeLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4B5E2F6020A028E6006F4579 /* FakeLocation.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4B397C3D209F314400A13487 /* HealthKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B397C40209F314500A13487 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B397C42209F314500A13487 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B397C42209F314500A13487 /* HKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKViewController.swift; sourceTree = "<group>"; };
 		4B397C45209F314500A13487 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B397C47209F314500A13487 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B397C4A209F314500A13487 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B397C4C209F314500A13487 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B397C52209F315E00A13487 /* HealthKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthKitDemo.entitlements; sourceTree = "<group>"; };
 		4B397C54209F315E00A13487 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		4B5E2F6020A028E6006F4579 /* FakeLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FakeLocation.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +63,8 @@
 			children = (
 				4B397C52209F315E00A13487 /* HealthKitDemo.entitlements */,
 				4B397C40209F314500A13487 /* AppDelegate.swift */,
-				4B397C42209F314500A13487 /* ViewController.swift */,
+				4B397C42209F314500A13487 /* HKViewController.swift */,
+				4B5E2F6020A028E6006F4579 /* FakeLocation.gpx */,
 				4B397C44209F314500A13487 /* Main.storyboard */,
 				4B397C47209F314500A13487 /* Assets.xcassets */,
 				4B397C49209F314500A13487 /* LaunchScreen.storyboard */,
@@ -105,7 +108,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Jacue;
 				TargetAttributes = {
 					4B397C3C209F314400A13487 = {
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B397C4B209F314500A13487 /* LaunchScreen.storyboard in Resources */,
+				4B5E2F6120A028F1006F4579 /* FakeLocation.gpx in Resources */,
 				4B397C48209F314500A13487 /* Assets.xcassets in Resources */,
 				4B397C46209F314500A13487 /* Main.storyboard in Resources */,
 			);
@@ -155,7 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B397C43209F314500A13487 /* ViewController.swift in Sources */,
+				4B397C43209F314500A13487 /* HKViewController.swift in Sources */,
 				4B397C41209F314500A13487 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +200,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -203,6 +208,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -253,6 +259,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -260,6 +267,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

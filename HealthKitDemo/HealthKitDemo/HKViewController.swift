@@ -10,7 +10,7 @@ import UIKit
 import CoreMotion
 import HealthKit
 
-class ViewController: UIViewController {
+class HKViewController: UIViewController {
 
     var healthStore: HKHealthStore?
     
@@ -93,18 +93,21 @@ class ViewController: UIViewController {
         self.healthStore?.save(stepCorrelationItem, withCompletion: { (success, error) in
             DispatchQueue.main.async {
                 if success {
-                    let alert = UIAlertView.init(title: "提示", message: "添加成功", delegate: nil, cancelButtonTitle: "确定")
-                    alert.show()
+                    let alert = UIAlertController.init(title: "提示", message: "添加成功", preferredStyle: .alert)
+                    let alertAction = UIAlertAction.init(title: "确定", style: .destructive, handler: nil)
+                    alert.addAction(alertAction)
+                    self.present(alert, animated: true, completion: nil)
                     self.testMotiuonUsage()
                 } else {
                     print("error: %@",error!)
-                    let alert = UIAlertView.init(title: "提示", message: "添加失败", delegate: nil, cancelButtonTitle: "确定")
-                    alert.show()
+                    let alert = UIAlertController.init(title: "提示", message: "添加失败", preferredStyle: .alert)
+                    let alertAction = UIAlertAction.init(title: "确定", style: .destructive, handler: nil)
+                    alert.addAction(alertAction)
+                    self.present(alert, animated: true, completion: nil)
                 }
             }
         })
     }
-    
 
     // 获取HKQuantitySample数据模型
     private func stepCorrelation(with stepNum: Double) -> HKQuantitySample {
@@ -114,21 +117,8 @@ class ViewController: UIViewController {
         let stepQuantityConsumed = HKQuantity.init(unit: HKUnit.meter(), doubleValue: stepNum)
         let stepConsumedType = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)
         
-//        let strName = UIDevice.current.name
-//        let strModel = UIDevice.current.model
-//        let strSysVersion = UIDevice.current.systemVersion
-//        let localeIdentifier = Locale.current.identifier
-//
-//        let device = HKDevice.init(name: strName, manufacturer: "Apple", model: strModel, hardwareVersion: strModel, firmwareVersion: strModel, softwareVersion: strSysVersion, localIdentifier: localeIdentifier, udiDeviceIdentifier: localeIdentifier)
-//
-//        let stepConsumedSample = HKQuantitySample.init(type: stepConsumedType!, quantity: stepQuantityConsumed, start: startDate, end: endDate, device: device, metadata: nil)
-//        return stepConsumedSample
-        
         return HKQuantitySample.init(type: stepConsumedType!, quantity: stepQuantityConsumed, start: startDate, end: endDate)
     }
-    
-    
-    
     
     
 }
