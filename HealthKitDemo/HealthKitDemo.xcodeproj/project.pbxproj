@@ -13,7 +13,6 @@
 		4B397C48209F314500A13487 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B397C47209F314500A13487 /* Assets.xcassets */; };
 		4B397C4B209F314500A13487 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B397C49209F314500A13487 /* LaunchScreen.storyboard */; };
 		4B397C55209F315E00A13487 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B397C54209F315E00A13487 /* HealthKit.framework */; };
-		4B5E2F6120A028F1006F4579 /* FakeLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4B5E2F6020A028E6006F4579 /* FakeLocation.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B397C4B209F314500A13487 /* LaunchScreen.storyboard in Resources */,
-				4B5E2F6120A028F1006F4579 /* FakeLocation.gpx in Resources */,
 				4B397C48209F314500A13487 /* Assets.xcassets in Resources */,
 				4B397C46209F314500A13487 /* Main.storyboard in Resources */,
 			);

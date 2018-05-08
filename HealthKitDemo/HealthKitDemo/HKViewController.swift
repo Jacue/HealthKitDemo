@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreMotion
 import HealthKit
 
 class HKViewController: UIViewController {
