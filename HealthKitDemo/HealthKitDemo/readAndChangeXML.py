@@ -22,9 +22,18 @@ def getPokemonLocation():
 	try:
 		# response = urllib2.urlopen("http://172.16.255.195/", timeout = 1)
 		# return json.load(response)
-		currentLat = currentLat + (endLat - startLat) / 3600 
-		currentLng = currentLng + (endLng - startLng) / 3600
+		if currentLat > endLat {
+			currentLat = currentLat - (endLat - startLat) / 3600 
+		} else {
+			currentLat = currentLat + (endLat - startLat) / 3600 
+		}
+		if currentLng > endLng {
+			currentLng = currentLng - (endLng - startLng) / 3600
+		} else {
+			currentLng = currentLng + (endLng - startLng) / 3600
+		}
 		return {"lat": str(currentLat), "lng":str(currentLng)}
+		
 	except urllib2.URLError as e:
 		print e.reason
 
